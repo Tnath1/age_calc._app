@@ -1,37 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="css/style.css" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Age calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Age calculator app</title>
 
-  Day
-  DD
-
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="full-content">
+      <form class="container">
+        <div>
+          <label for="days">DAY</label><br />
+          <input type="text" id="days" name="days" placeholder="15" />
+        </div>
+        <div>
+          <label for="months">MONTH</label><br />
+          <input type="text" id="months" name="months" placeholder="2" />
+        </div>
+        <div>
+          <label for="years">YEAR</label><br />
+          <input type="text" id="years" name="years" placeholder="1996" />
+        </div>
+      </form>
+      <div class="hr-container">
+        <hr />
+        <img
+          class="img"
+          src="images/icon-arrow.svg"
+          alt="an arrow"
+          style="background-color: blue"
+        />
+      </div>
+      <h4><span class="colored-dash">--</span> years</h4>
+      <h4><span class="colored-dash">--</span> months</h4>
+      <h4><span class="colored-dash">--</span> years</h4>
+    </div>
+    <div class="attribution">
+      <p>Coded by: <a href="#">Arome Jonothan</a>.</p>
+    </div>
+  </body>
 </html>
