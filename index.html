@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-    <link rel="stylesheet" href="scss/styles.css" />
-
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,300&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -16,29 +21,21 @@
     <title>Age calculator app</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
+    <style></style>
   </head>
   <body>
-    <div class="full-content">
+    <div class="contents">
       <form class="container">
         <div>
-          <label for="days">DAY</label><br />
+          <label for="days" class="p">DAY</label><br />
           <input type="text" id="days" name="days" placeholder="15" />
         </div>
         <div>
-          <label for="months">MONTH</label><br />
+          <label for="months" class="p">MONTH</label><br />
           <input type="text" id="months" name="months" placeholder="2" />
         </div>
         <div>
-          <label for="years">YEAR</label><br />
+          <label for="years" class="p">YEAR</label><br />
           <input type="text" id="years" name="years" placeholder="1996" />
         </div>
       </form>
