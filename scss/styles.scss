@@ -36,6 +36,21 @@ body {
       input {
         font-size: 32px;
         width: 100px;
+        margin-top: 10px;
+        border-radius: 8%;
+        padding: 7px;
+        border: 1px solid $Smokey-grey;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        outline: none;
+      }
+      input[type="text"]:focus {
+        border: 1px solid $Purple;
+      }
+      .p {
+        font-size: 13px;
+        font-weight: bolder;
+        color: $Off-black;
       }
     }
   }
@@ -49,7 +64,7 @@ body {
       width: 100%;
       position: relative;
       // margin: 15px;
-      border-bottom: 1px solid #000;
+      border-bottom: 1px solid $Off-black;
     }
     .img {
       background-color: $Purple;
@@ -57,10 +72,17 @@ body {
       padding: 10px;
     }
   }
+  h4 {
+    font-size: 50px;
+    .colored-dash {
+      color: $Purple;
+    }
+  }
 }
 
 .attribution {
-  font-size: 11px;
+  padding: 10px;
+  font-size: 15px;
   text-align: center;
 
   a {
