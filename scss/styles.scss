@@ -45,6 +45,10 @@ body {
         outline: none;
         cursor: pointer;
       }
+      .error-message {
+        color: $Light-red;
+        font-size: small;
+      }
       input[type="text"]:focus {
         border: 1px solid $Purple;
       }
