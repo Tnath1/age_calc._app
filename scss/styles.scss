@@ -18,8 +18,8 @@ body {
 }
 
 .contents {
-  width: 600px; /* Set the desired width */
-  height: 500px; /* Set the desired height */
+  width: auto; /* Set the desired width */
+  height: auto; /* Set the desired height */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -35,8 +35,9 @@ body {
     .input {
       input {
         font-size: 32px;
-        width: 100px;
-        margin-top: 10px;
+        width: 120px;
+        text-align: center;
+        margin-top: 5px;
         border-radius: 8%;
         padding: 7px;
         border: 1px solid $Smokey-grey;
