@@ -43,6 +43,7 @@ body {
         -webkit-transition: 0.5s;
         transition: 0.5s;
         outline: none;
+        cursor: pointer;
       }
       input[type="text"]:focus {
         border: 1px solid $Purple;
@@ -70,6 +71,7 @@ body {
       background-color: $Purple;
       border-radius: 50%;
       padding: 10px;
+      cursor: pointer;
     }
   }
   h4 {

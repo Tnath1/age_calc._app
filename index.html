@@ -26,18 +26,21 @@
   </head>
   <body>
     <div class="contents">
-      <form class="container">
+      <form class="container" id="myForm">
         <div class="input">
           <label for="days" class="p">DAY</label><br />
           <input type="text" id="days" name="days" placeholder="dd" />
+          <p id="days-error" class="error-message"></p>
         </div>
         <div class="input">
           <label for="months" class="p">MONTH</label><br />
           <input type="text" id="months" name="months" placeholder="mm" />
+          <p id="months-error" class="error-message"></p>
         </div>
         <div class="input">
           <label for="years" class="p">YEAR</label><br />
           <input type="text" id="years" name="years" placeholder="yyyy" />
+          <p id="years-error" class="error-message"></p>
         </div>
       </form>
       <div class="hr-container">
