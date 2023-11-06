@@ -7,6 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const firstInput = document.querySelector("#days");
     const secondInput = document.querySelector("#months");
     const thirdInput = document.querySelector("#years");
+    const redLabel = document.querySelector("#label");
+    const redLabel02 = document.querySelector("#label2");
+    const redLabel03 = document.querySelector("#label3");
+
     // Clear existing error messages
     document.querySelectorAll(".error-message").forEach((errorElement) => {
       errorElement.textContent = "";
@@ -19,13 +23,16 @@ document.addEventListener("DOMContentLoaded", function () {
       document.querySelector("#days-error").textContent =
         "This field is required.";
       firstInput.style.border = "1px solid hsl(0, 100%, 67%)";
+      redLabel.style.color = "hsl(0, 100%, 67%)";
     } else if (isNaN(day) || day < 1 || day > 31) {
       errors.day = "Please enter a valid day (1-31).";
       document.querySelector("#days-error").textContent =
         "Please enter a valid day.";
       firstInput.style.border = "1px solid hsl(0, 100%, 67%)";
+      redLabel.style.color = "hsl(0, 100%, 67%)";
     } else {
       firstInput.style.border = "1px solid hsl(0, 1%, 44%)";
+      redLabel.style.color = "hsl(0, 1%, 44%)";
     }
 
     if (!month.trim()) {
@@ -33,13 +40,16 @@ document.addEventListener("DOMContentLoaded", function () {
       document.querySelector("#months-error").textContent =
         "This field is required.";
       secondInput.style.border = "1px solid hsl(0, 100%, 67%)";
+      redLabel02.style.color = "hsl(0, 100%, 67%)";
     } else if (isNaN(month) || month < 1 || month > 12) {
       errors.month = "Please enter a valid month (1-12).";
       document.querySelector("#months-error").textContent =
         "Please enter a valid month.";
       secondInput.style.border = "1px solid hsl(0, 100%, 67%)";
+      redLabel02.style.color = "hsl(0, 100%, 67%)";
     } else {
       secondInput.style.border = "1px solid hsl(0, 1%, 44%)";
+      redLabel02.style.color = "hsl(0, 1%, 44%)";
     }
 
     if (!year.trim()) {
@@ -47,24 +57,16 @@ document.addEventListener("DOMContentLoaded", function () {
       document.querySelector("#years-error").textContent =
         "This field is required.";
       thirdInput.style.border = "1px solid hsl(0, 100%, 67%)";
+      redLabel03.style.color = "hsl(0, 100%, 67%)";
     } else if (isNaN(year) || year > new Date().getFullYear()) {
       errors.year = "Year must be in the past.";
       document.querySelector("#years-error").textContent =
         "Year must be in the past.";
       thirdInput.style.border = "1px solid hsl(0, 100%, 67%)";
+      redLabel03.style.color = "hsl(0, 100%, 67%)";
     } else {
       thirdInput.style.border = "1px solid hsl(0, 1%, 44%)";
-    }
-
-    // Add more field validations as needed.
-
-    // Check if the input is empty
-    if (!errors) {
-      // If it's empty, add the error-border class
-    } else {
-      // If it's not empty, remove the error-border class (in case it was added previously)
-      inputField.classList.remove("error");
-      // Submit the form or perform other actions
+      redLabel03.style.color = "hsl(0, 1%, 44%)";
     }
 
     return errors;
