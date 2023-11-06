@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let day = document.querySelector("#days").value;
     let month = document.querySelector("#months").value;
     let year = document.querySelector("#years").value;
-
+    const inputField = document.querySelector("#days");
     // Clear existing error messages
     document.querySelectorAll(".error-message").forEach((errorElement) => {
       errorElement.textContent = "";
@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
       errors.day = "This field is required.";
       document.querySelector("#days-error").textContent =
         "This field is required.";
+      inputField.style.border = "1px solid hsl(0, 100%, 67%)";
     } else if (isNaN(day) || day < 1 || day > 31) {
       errors.day = "Please enter a valid day (1-31).";
       document.querySelector("#days-error").textContent =
@@ -43,6 +44,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Add more field validations as needed.
+
+    // Check if the input is empty
+    if (!errors) {
+      // If it's empty, add the error-border class
+    } else {
+      // If it's not empty, remove the error-border class (in case it was added previously)
+      inputField.classList.remove("error");
+      // Submit the form or perform other actions
+    }
 
     return errors;
   }
