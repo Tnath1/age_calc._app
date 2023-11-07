@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Function to calculate age based on the input date
   function calculateAge() {
     const day = parseInt(document.querySelector("#days").value);
     const month = parseInt(document.querySelector("#months").value);
@@ -15,6 +14,14 @@ document.addEventListener("DOMContentLoaded", function () {
     if (ageMonths < 0 || (ageMonths === 0 && ageDays < 0)) {
       ageYears--;
       ageMonths += 12;
+      ageDays =
+        ageDays +
+        new Date(
+          currentDate.getFullYear(),
+          currentDate.getMonth(),
+          0
+        ).getDate() -
+        birthDate.getDate();
     }
 
     return {
@@ -100,6 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Calculate age as shown in the previous response
       // Display the calculated age in the respective span tags
       const age = calculateAge();
+      // console.log(age);
       document.querySelector("#result-year").textContent = age.years + " years";
       document.querySelector("#result-month").textContent =
         age.months + " months";
@@ -147,6 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault(); // Prevent form submission
       } else {
         // Form is valid, submit it to the server
+        calculateAge(); // Call the calculateAge function
         document.getElementById("myForm").submit();
       }
     });
