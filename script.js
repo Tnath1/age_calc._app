@@ -1,4 +1,29 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Function to calculate age based on the input date
+  function calculateAge() {
+    const day = parseInt(document.querySelector("#days").value);
+    const month = parseInt(document.querySelector("#months").value);
+    const year = parseInt(document.querySelector("#years").value);
+
+    const birthDate = new Date(year, month - 1, day); // month is 0-based (0 = January)
+    const currentDate = new Date();
+
+    let ageYears = currentDate.getFullYear() - birthDate.getFullYear();
+    let ageMonths = currentDate.getMonth() - birthDate.getMonth();
+    let ageDays = currentDate.getDate() - birthDate.getDate();
+
+    if (ageMonths < 0 || (ageMonths === 0 && ageDays < 0)) {
+      ageYears--;
+      ageMonths += 12;
+    }
+
+    return {
+      years: ageYears,
+      months: ageMonths,
+      days: ageDays,
+    };
+  }
+
   // Function to handle validation and error messages
   function handleValidation() {
     let day = document.querySelector("#days").value;
@@ -67,6 +92,18 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       thirdInput.style.border = "1px solid hsl(0, 1%, 44%)";
       redLabel03.style.color = "hsl(0, 1%, 44%)";
+    }
+    // ...
+
+    // Calculate age if no errors and display it in span tags
+    if (Object.keys(errors).length === 0) {
+      // Calculate age as shown in the previous response
+      // Display the calculated age in the respective span tags
+      const age = calculateAge();
+      document.querySelector("#result-year").textContent = age.years + " years";
+      document.querySelector("#result-month").textContent =
+        age.months + " months";
+      document.querySelector("#result-day").textContent = age.days + " days";
     }
 
     return errors;
