@@ -31,7 +31,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: $White;
-  padding: 50px;
+  padding: 20px 50px 30px 50px;
   border-radius: 8% 8% 30% 8%;
 
   .container {
@@ -104,6 +104,6 @@ body {
 }
 @media (max-width: 375px) {
   .contents {
-    margin: 0 20px; /* Adjust padding for smaller screens */
+    /* Adjust padding for smaller screens */
   }
 }
