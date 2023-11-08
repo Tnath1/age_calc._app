@@ -101,7 +101,6 @@ document.addEventListener("DOMContentLoaded", function () {
       thirdInput.style.border = "1px solid hsl(0, 1%, 44%)";
       redLabel03.style.color = "hsl(0, 1%, 44%)";
     }
-    // ...
 
     // Calculate age if no errors and display it in span tags
     if (Object.keys(errors).length === 0) {
@@ -120,12 +119,12 @@ document.addEventListener("DOMContentLoaded", function () {
       if (mnth <= 1) {
         document.querySelector("#mnth").textContent = "Month";
       } else {
-        document.querySelector("#yr").textContent = "Months";
+        document.querySelector("#mnth").textContent = "Months";
       }
       if (dy <= 1) {
         document.querySelector("#dy").textContent = "Day";
       } else {
-        document.querySelector("#yr").textContent = "Days";
+        document.querySelector("#dy").textContent = "Days";
       }
     }
 
