@@ -114,12 +114,18 @@ document.addEventListener("DOMContentLoaded", function () {
       let dy = (document.querySelector("#result-day").textContent = age.days);
       if (yr <= 1) {
         document.querySelector("#yr").textContent = "Year";
+      } else {
+        document.querySelector("#yr").textContent = "Years";
       }
       if (mnth <= 1) {
         document.querySelector("#mnth").textContent = "Month";
+      } else {
+        document.querySelector("#yr").textContent = "Months";
       }
       if (dy <= 1) {
         document.querySelector("#dy").textContent = "Day";
+      } else {
+        document.querySelector("#yr").textContent = "Days";
       }
     }
 
