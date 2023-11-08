@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // function to calculate age
   function calculateAge() {
     const day = parseInt(document.querySelector("#days").value);
     const month = parseInt(document.querySelector("#months").value);
     const year = parseInt(document.querySelector("#years").value);
 
-    const birthDate = new Date(year, month - 1, day); // month is 0-based (0 = January)
+    const birthDate = new Date(year, month, day);
     const currentDate = new Date();
 
     let ageYears = currentDate.getFullYear() - birthDate.getFullYear();
@@ -26,8 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     return {
       years: ageYears,
-      months: ageMonths,
-      days: ageDays,
+      months: ageDays >= 0 ? ageMonths + 1 : ageMonths,
+      days: Math.abs(ageDays),
     };
   }
 
@@ -104,14 +105,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Calculate age if no errors and display it in span tags
     if (Object.keys(errors).length === 0) {
-      // Calculate age as shown in the previous response
-      // Display the calculated age in the respective span tags
+      // function calculateAge call
       const age = calculateAge();
-      // console.log(age);
-      document.querySelector("#result-year").textContent = age.years + " years";
-      document.querySelector("#result-month").textContent =
-        age.months + " months";
-      document.querySelector("#result-day").textContent = age.days + " days";
+      console.log(age);
+      document.querySelector("#result-year").textContent = age.years;
+      document.querySelector("#result-month").textContent = age.months;
+      document.querySelector("#result-day").textContent = age.days;
     }
 
     return errors;
@@ -156,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         // Form is valid, submit it to the server
         calculateAge(); // Call the calculateAge function
-        document.getElementById("myForm").submit();
+        // document.getElementById("myForm").submit();
       }
     });
 });
