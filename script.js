@@ -108,9 +108,19 @@ document.addEventListener("DOMContentLoaded", function () {
       // function calculateAge call
       const age = calculateAge();
       console.log(age);
-      document.querySelector("#result-year").textContent = age.years;
-      document.querySelector("#result-month").textContent = age.months;
-      document.querySelector("#result-day").textContent = age.days;
+      let yr = (document.querySelector("#result-year").textContent = age.years);
+      let mnth = (document.querySelector("#result-month").textContent =
+        age.months);
+      let dy = (document.querySelector("#result-day").textContent = age.days);
+      if (yr <= 1) {
+        document.querySelector("#yr").textContent = "Year";
+      }
+      if (mnth <= 1) {
+        document.querySelector("#mnth").textContent = "Month";
+      }
+      if (dy <= 1) {
+        document.querySelector("#dy").textContent = "Day";
+      }
     }
 
     return errors;
@@ -153,9 +163,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         event.preventDefault(); // Prevent form submission
       } else {
-        // Form is valid, submit it to the server
+        // Form is valid,
         calculateAge(); // Call the calculateAge function
-        // document.getElementById("myForm").submit();
       }
     });
 });
