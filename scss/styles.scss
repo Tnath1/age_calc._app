@@ -15,6 +15,12 @@ $Off-black: hsl(0, 0%, 8%);
 }
 body {
   background-color: $Light-grey;
+  h4.p-age {
+    color: $Purple;
+    padding: 10px;
+    text-align: center;
+    font-size: 40px;
+  }
 }
 
 .contents {
