@@ -26,47 +26,49 @@
   </head>
   <body>
     <div class="contents">
-      <h4 class="p-age">Calculate your Age</h4>
-      <form class="container" id="myForm">
-        <div class="input">
-          <label for="days" id="label" class="p">DAY</label><br />
-          <input type="text" id="days" name="days" placeholder="dd" />
-          <p id="days-error" class="error-message"></p>
+      <div>
+        <h4 class="p-age">Calculate your Age</h4>
+        <form class="container" id="myForm">
+          <div class="input">
+            <label for="days" id="label" class="p">DAY</label><br />
+            <input type="text" id="days" name="days" placeholder="dd" />
+            <p id="days-error" class="error-message"></p>
+          </div>
+          <div class="input">
+            <label for="months" id="label2" class="p">MONTH</label><br />
+            <input type="text" id="months" name="months" placeholder="mm" />
+            <p id="months-error" class="error-message"></p>
+          </div>
+          <div class="input">
+            <label for="years" id="label3" class="p">YEAR</label><br />
+            <input type="text" id="years" name="years" placeholder="yyyy" />
+            <p id="years-error" class="error-message"></p>
+          </div>
+        </form>
+        <div class="hr-container">
+          <div class="hr-line"></div>
+          <img
+            class="img"
+            src="images/icon-arrow.svg"
+            alt="an arrow"
+            id="image-button"
+          />
         </div>
-        <div class="input">
-          <label for="months" id="label2" class="p">MONTH</label><br />
-          <input type="text" id="months" name="months" placeholder="mm" />
-          <p id="months-error" class="error-message"></p>
+        <h4>
+          <span id="result-year" class="colored-dash">--</span>
+          <span id="yr"> Years</span>
+        </h4>
+        <h4>
+          <span id="result-month" class="colored-dash">--</span>
+          <span id="mnth">Months</span>
+        </h4>
+        <h4>
+          <span id="result-day" class="colored-dash">--</span>
+          <span id="dy">Days</span>
+        </h4>
+        <div class="attribution">
+          <p>Coded by: <a href="#">Arome Jonothan</a>.</p>
         </div>
-        <div class="input">
-          <label for="years" id="label3" class="p">YEAR</label><br />
-          <input type="text" id="years" name="years" placeholder="yyyy" />
-          <p id="years-error" class="error-message"></p>
-        </div>
-      </form>
-      <div class="hr-container">
-        <div class="hr-line"></div>
-        <img
-          class="img"
-          src="images/icon-arrow.svg"
-          alt="an arrow"
-          id="image-button"
-        />
-      </div>
-      <h4>
-        <span id="result-year" class="colored-dash">--</span>
-        <span id="yr"> Years</span>
-      </h4>
-      <h4>
-        <span id="result-month" class="colored-dash">--</span>
-        <span id="mnth">Months</span>
-      </h4>
-      <h4>
-        <span id="result-day" class="colored-dash">--</span>
-        <span id="dy">Days</span>
-      </h4>
-      <div class="attribution">
-        <p>Coded by: <a href="#">Arome Jonothan</a>.</p>
       </div>
     </div>
 

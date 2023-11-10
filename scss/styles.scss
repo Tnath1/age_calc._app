@@ -103,15 +103,78 @@ body {
   }
 }
 
-@media screen and (max-width: 400px) {
-  /* Adjust padding for smaller screens */
+@media screen and (max-width: 500px) {
+  .contents {
+  }
   body {
     background-color: $Light-grey;
     h4.p-age {
-      color: red;
-      padding: 10px;
+      color: $Purple;
+      padding: 5px;
       text-align: center;
+      font-size: 28px;
+    }
+  }
+
+  .contents {
+    width: 90%; /* Adjust the width as needed */
+    padding: 30px;
+
+    .container {
+      display: flex;
+      gap: 30px;
+
+      .input {
+        input {
+          font-size: 20px;
+          width: 100px;
+          text-align: center;
+          margin-top: 2px;
+          border-radius: 8%;
+          padding: 7px;
+        }
+
+        .p {
+          font-size: 11px;
+          font-weight: bolder;
+          color: $Off-black;
+        }
+      }
+    }
+    .hr-container {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      padding-top: 10px;
+
+      .hr-line {
+        width: 100%;
+        position: relative;
+        // margin: 15px;
+        border-bottom: 1px solid $Off-black;
+      }
+      .img {
+        background-color: $Purple;
+        border-radius: 48%;
+        padding: 7px;
+        cursor: pointer;
+      }
+    }
+    h4 {
       font-size: 40px;
+      .colored-dash {
+        color: $Purple;
+      }
+    }
+  }
+
+  .attribution {
+    padding-top: 10px;
+    font-size: 15px;
+    text-align: center;
+
+    a {
+      color: hsl(228, 45%, 44%);
     }
   }
 }
